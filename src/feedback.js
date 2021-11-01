@@ -324,7 +324,7 @@ export default class Feedback {
 	}
 
 	_addStyle() {
-		const styles = document.createElement("style"), css = `
+		const css = `
 			#feedback-root{
 				font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 			}
