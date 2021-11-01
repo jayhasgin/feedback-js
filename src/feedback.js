@@ -647,8 +647,8 @@ export default class Feedback {
 		const comment = document.createComment('feedback-js stylesheet')
 		document.head.appendChild(comment)
 		
-		const styleElement = document.createElement("style");
-		styleElement.innerHTML = css; 
+		const styleElement = document.createElement("style")
+		styleElement.innerHTML = css
 		document.head.appendChild(styleElement)
 	}
 }
