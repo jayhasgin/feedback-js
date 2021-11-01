@@ -324,7 +324,7 @@ export default class Feedback {
 	}
 
 	_addStyle() {
-		const css = `
+		const styles = document.createElement("style"), css = `
 			#feedback-root{
 				font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 			}
@@ -646,11 +646,9 @@ export default class Feedback {
 
 		const comment = document.createComment('feedback-js stylesheet')
 		document.head.appendChild(comment)
-
-		const linkElement = document.createElement('link')
-		linkElement.setAttribute('rel', 'stylesheet')
-		linkElement.setAttribute('type', 'text/css')
-		linkElement.setAttribute('href', 'data:text/css;charset=UTF-8,' + encodeURIComponent(css))
-		document.head.appendChild(linkElement)
+		
+		const styleElement = document.createElement("style");
+		styleElement.innerHTML = css; 
+		document.head.appendChild(styleElement)
 	}
 }
